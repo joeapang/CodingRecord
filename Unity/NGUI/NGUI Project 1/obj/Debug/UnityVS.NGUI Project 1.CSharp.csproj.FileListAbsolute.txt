@@ -1,0 +1,13 @@
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\Assembly-CSharp.dll
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\Assembly-CSharp.pdb
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+E:\Unity5.0\NGUI Project 1\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+E:\Unity5.0\NGUI Project 1\obj\Debug\UnityVS.NGUI Project 1.CSharp.csprojResolveAssemblyReference.cache
+E:\Unity5.0\NGUI Project 1\obj\Debug\Assembly-CSharp.dll
+E:\Unity5.0\NGUI Project 1\obj\Debug\Assembly-CSharp.pdb
