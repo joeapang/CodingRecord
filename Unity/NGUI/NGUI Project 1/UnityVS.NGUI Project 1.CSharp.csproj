@@ -200,12 +200,16 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
     <Compile Include="Assets\Scripts\ActiveButton.cs" />
+    <Compile Include="Assets\Scripts\ColliderAdapt.cs" />
     <Compile Include="Assets\Scripts\CreatePopupList.cs" />
     <Compile Include="Assets\Scripts\GetPrecent.cs" />
     <Compile Include="Assets\Scripts\MenuSetting.cs" />
     <Compile Include="Assets\Scripts\PasswordLimit.cs" />
+    <Compile Include="Assets\Scripts\ResizeListener.cs" />
+    <Compile Include="Assets\Scripts\ResizeObject.cs" />
     <Compile Include="Assets\Scripts\SetText.cs" />
     <Compile Include="Assets\Scripts\SkillCD.cs" />
+    <Compile Include="Assets\TestTextList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
