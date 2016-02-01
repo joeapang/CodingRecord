@@ -1,0 +1,13 @@
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEditor.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEngine.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEngine.xml
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEditor.xml
+E:\Unity5.0\ARPGGame\Temp\UnityVS_bin\Debug\UnityEditor.iOS.Extensions.Xcode.xml
+E:\Unity5.0\ARPGGame\Temp\UnityVS_obj\Debug\UnityVS.ARPGGame.CSharp.Plugins.csprojResolveAssemblyReference.cache
+E:\Unity5.0\ARPGGame\Temp\UnityVS_obj\Debug\Assembly-CSharp-firstpass.dll
+E:\Unity5.0\ARPGGame\Temp\UnityVS_obj\Debug\Assembly-CSharp-firstpass.pdb
