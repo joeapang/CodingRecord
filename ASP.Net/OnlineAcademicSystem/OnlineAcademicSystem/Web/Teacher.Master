@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Web.Teacher" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function displaySubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "block";
+        }
+        function hideSubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "none";
+        }
+    </script>
+</head>
+<body style="background-color:gray">
+    <form id="form3" runat="server">
+        <div align="center" style="background-color:white;width:810px;height:665px;margin:0 auto">
+            <div id="backimage"></div>
+            <div id="menu" style="background-color: #ffc90d;float:left;width:400px;">
+                <ul>
+                    <li>
+                        <a href="Index.aspx">首页</a>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>系统设置</a>
+                        <ul>
+                            <li><a href="check_student.aspx">查看学生信息</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>课程管理</a>
+                        <ul>
+                            <li><a href="check_course.aspx">查看授课</a></li>
+                            <li><a href="entry_score.aspx">录入成绩</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>个人信息</a>
+                        <ul>
+                            <li><a href="Modifypassword.aspx">修改密码</a></li>
+                            <li><a href="../Login.aspx">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div style="background-color: #ffc90d;height:34px;line-height:34px;width:450px;margin-left:360px;">
+                <asp:Label ID="Label1" runat="server" Text="欢迎你："></asp:Label>
+                <asp:Label ID="name" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="老师"></asp:Label>
+            </div>
+            <br />
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

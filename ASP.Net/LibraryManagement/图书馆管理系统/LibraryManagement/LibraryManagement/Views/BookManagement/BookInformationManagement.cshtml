@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LibraryManagement.Models.Book>
+@{
+    ViewBag.Title = "BookInformationManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+<center><h2>图书档案管理</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <center><a href="~/BookManagement/AddBookInformation">添加图书类型信息</a></center>
+@using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td>条形码</td>
+            <td>图书名称</td>
+            <td>图书类型</td>
+            <td>出版社</td>
+            <td>书架</td>
+            <td>库存总数</td>
+            <td>详情</td>
+            <td>删除</td>
+        </tr>
+        @foreach(var book in Model)
+        {
+            <tr>
+                <td>@book.bookcode</td>
+                <td>@book.bookname</td>
+                <td>@book.BookTypes.typename</td>
+                <td>@book.pubname</td>
+                <td>@book.BookCases.bookcasename</td>
+                <td>@book.storage</td>
+                <td><a href="~/BookManagement/BookInformationDetails?id=@book.bookcode" style="color:#b200ff">详情</a></td>
+                <td><a href="~/BookManagement/DeleteBook?id=@book.bookcode" style="color:#b200ff">删除</a></td>
+            </tr>
+        }
+    </table>
+}
+</div>

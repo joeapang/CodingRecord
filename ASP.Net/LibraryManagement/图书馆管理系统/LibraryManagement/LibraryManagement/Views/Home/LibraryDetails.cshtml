@@ -1,0 +1,48 @@
+﻿@model LibraryManagement.Models.LibraryInformation
+@{
+    ViewBag.Title = "图书馆简介";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<center><h2>图书馆简介</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <table align="center">
+        <tr>
+            <td>@Html.LabelFor(model => model.libraryname):</td>
+            <td>@Html.TextBoxFor(model => model.libraryname, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.curator):</td>
+            <td>@Html.TextBoxFor(model => model.curator, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.tel):</td>
+            <td>@Html.TextBoxFor(model => model.tel, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.address):</td>
+            <td>@Html.TextBoxFor(model => model.address, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.email):</td>
+            <td>@Html.TextBoxFor(model => model.email, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.url):</td>
+            <td>@Html.TextBoxFor(model => model.url, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.createDate):</td>
+            <td>@Html.TextBoxFor(model => model.createDate, new { @readOnly = "readOnly" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(model => model.introduce):</td>
+            <td>@Html.TextAreaFor(model => model.introduce, new { @readOnly = "readOnly" })</td>
+        </tr>
+    </table>
+    <br />
+</div>

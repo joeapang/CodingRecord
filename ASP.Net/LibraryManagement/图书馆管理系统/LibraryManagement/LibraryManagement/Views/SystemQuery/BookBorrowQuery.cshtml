@@ -1,0 +1,69 @@
+﻿@model LibraryManagement.Models.BorrowQuery
+@{
+    ViewBag.Title = "BookBorrowQuery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<center><h2>图书借阅查询</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <p>
+            请选择查询条件：
+            @Html.DropDownList("queryconditions", new List<SelectListItem> {
+                new SelectListItem(){Text="全部借阅", Value="全部借阅"},
+                new SelectListItem(){Text="条形码", Value="条形码"},
+		        new SelectListItem(){Text="图书名称", Value="图书名称"},
+                new SelectListItem(){Text="读者编号", Value="读者编号"},
+                new SelectListItem(){Text="读者名称", Value="读者名称"},
+                new SelectListItem(){Text="借阅时间", Value="借阅时间"}}, new { @style = "width:100px;height:24px;" })
+            @Html.TextBoxFor(model => model.importqueryconditions, new { @style = "width:200px;height:20px;" })
+            &nbsp;
+            <input id="Submit1" type="submit" value="查询" style="width:50px;height:30px;" />
+        </p>
+        <br />
+        <br />
+        <br />
+        <center><a href="~/BorrowBook/Back">归还图书</a></center>
+        <table class="tb3">
+            <tr>
+                <td>图书条形码</td>
+                <td>图书名称</td>
+                <td>读者编号</td>
+                <td>读者名称</td>
+                <td>借阅时间</td>
+                <td>应还时间</td>
+                <td>是否归还</td>
+            </tr>
+            @foreach (var borrow in Model.BorrowBooks)
+            {
+                <tr>
+                    <td>@borrow.bookcode</td>
+                    <td>@borrow.Books.bookname</td>
+                    <td>@borrow.readerid</td>
+                    <td>@borrow.Readers.readername</td>
+                    <td>@borrow.borrowTime</td>
+                    <td>@borrow.ygbackTime</td>
+                    <td>
+                        @if(borrow.isback)
+                        {
+                            @:是
+                        }
+                        else
+                        {
+                            @:否
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

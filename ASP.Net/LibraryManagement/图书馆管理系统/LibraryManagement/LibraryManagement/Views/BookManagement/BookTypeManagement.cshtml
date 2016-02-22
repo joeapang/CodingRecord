@@ -1,0 +1,38 @@
+﻿@model IEnumerable<LibraryManagement.Models.BookType>
+@{
+    ViewBag.Title = "BookTypeManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+<center><h2>图书类型管理</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <center><a href="~/BookManagement/AddBookType">添加图书类型信息</a></center>
+@using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td>图书类型名称</td>
+            <td>可借天数</td>
+            <td>修改</td>
+            <td>删除</td>
+        </tr>
+        @foreach(var booktype in Model)
+        {
+            <tr>
+                <td>@booktype.typename</td>
+                <td>@booktype.days</td>
+                <td><a href="~/BookManagement/EditBookType?id=@booktype.booktypeid" style="color:#b200ff">修改</a></td>
+                <td><a href="~/BookManagement/DeleteBookType?id=@booktype.booktypeid" style="color:#b200ff">删除</a></td>
+            </tr>
+        }
+    </table>
+}
+</div>

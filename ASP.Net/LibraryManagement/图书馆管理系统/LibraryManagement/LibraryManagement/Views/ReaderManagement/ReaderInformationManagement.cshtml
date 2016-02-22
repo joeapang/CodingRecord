@@ -1,0 +1,48 @@
+﻿@model IEnumerable<LibraryManagement.Models.Reader>
+@{
+    ViewBag.Title = "ReaderInformationManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+<center><h2>读者个人信息</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <center><a href="~/ReaderManagement/AddReaderInformation">添加读者个人信息</a></center>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>读者编号</td>
+                <td>姓名</td>
+                <td>读者类型</td>
+                <td>证件类型</td>
+                <td>证件号码</td>
+                <td>电话</td>
+                <td>Email</td>
+                <td>详情</td>
+                <td>删除</td>
+            </tr>
+            @foreach(var reader in Model)
+            {
+                <tr>
+                    <td>@reader.readerid</td>
+                    <td>@reader.readername</td>
+                    <td>@reader.ReaderTypes.readertype</td>
+                    <td>@reader.paperType</td>
+                    <td>@reader.paperNum</td>
+                    <td>@reader.tel</td>
+                    <td>@reader.email</td>
+                    <td><a href="~/ReaderManagement/ReaderInformationDetails?id=@reader.readerid" style="color:#b200ff">详情</a></td>
+                    <td><a href="~/ReaderManagement/DeleteReader?id=@reader.readerid" style="color:#b200ff">删除</a></td>
+                </tr>
+            }
+        </table>
+}
+</div>

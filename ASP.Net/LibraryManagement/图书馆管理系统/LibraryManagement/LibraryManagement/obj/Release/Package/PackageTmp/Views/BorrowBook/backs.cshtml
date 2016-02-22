@@ -1,0 +1,30 @@
+﻿@model LibraryManagement.Models.BorrowBook
+@{
+    ViewBag.Title = "backs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div align="center">
+        <table align="center">
+            <tr>
+                <td>图书条形码:</td>
+                <td>@Html.TextBoxFor(model => model.bookcode, new { @readOnly = "readOnly" })</td>
+            </tr>
+            <tr>
+                <td>读者ID：</td>
+                <td>@Html.TextBoxFor(model => model.readerid, new { @readOnly = "readOnly" })</td>
+            </tr>
+        </table>
+        <br />
+        <br />
+        <center><h2><input id="Submit1" type="submit" value="确认归还" style="width: 80px; height: 30px; border-radius: 5px; " /></h2></center>
+        @Html.ActionLink("返回", "Back")
+    </div>
+}

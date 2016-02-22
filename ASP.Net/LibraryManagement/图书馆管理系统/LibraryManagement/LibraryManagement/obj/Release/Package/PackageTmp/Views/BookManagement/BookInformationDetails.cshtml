@@ -1,0 +1,95 @@
+﻿@model LibraryManagement.Models.Book
+@{
+    ViewBag.Title = "BookInformationDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+</head>
+
+<center><h2>修改图书信息</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>条形码：</td>
+                <td>@Html.EditorFor(model => model.bookcode)</td>
+                <td>@Html.ValidationMessageFor(model => model.bookcode)</td>
+            </tr>
+            <tr>
+                <td>图书名称：</td>
+                <td>@Html.EditorFor(model => model.bookname)</td>
+                <td>@Html.ValidationMessageFor(model => model.bookname)</td>
+            </tr>
+            <tr>
+                <td>图书类型：</td>
+                <td>
+                    @Html.DropDownList("booktypeid", new SelectList(ViewBag.BookTypes as System.Collections.IEnumerable,
+                         "booktypeid", "typename", Model.booktypeid))
+                </td>
+            </tr>
+            <tr>
+                <td>作者：</td>
+                <td>@Html.EditorFor(model => model.author)</td>
+                <td>@Html.ValidationMessageFor(model => model.author)</td>
+            </tr>
+            <tr>
+                <td>译者：</td>
+                <td>@Html.EditorFor(model => model.translator)</td>
+                <td>@Html.ValidationMessageFor(model => model.translator)</td>
+            </tr>
+            <tr>
+                <td>出版社：</td>
+                <td>@Html.EditorFor(model => model.pubname)</td>
+                <td>@Html.ValidationMessageFor(model => model.pubname)</td>
+            </tr>
+            <tr>
+                <td>价格：</td>
+                <td>@Html.EditorFor(model => model.price)</td>
+                <td>@Html.ValidationMessageFor(model => model.price)</td>
+            </tr>
+            <tr>
+                <td>页码：</td>
+                <td>@Html.EditorFor(model => model.page)</td>
+                <td>@Html.ValidationMessageFor(model => model.page)</td>
+            </tr>
+            <tr>
+                <td>书架：</td>
+                <td>
+                    @Html.DropDownList("bookcaseid", new SelectList(ViewBag.BookCases as System.Collections.IEnumerable,
+                                  "bookcaseid", "bookcasename", Model.bookcaseid))
+                </td>
+            </tr>
+            <tr>
+                <td>库存数量：</td>
+                <td>@Html.EditorFor(model => model.storage)</td>
+                <td>@Html.ValidationMessageFor(model => model.storage)</td>
+            </tr>
+            <tr>
+                <td>入馆时间：</td>
+                <td>@Html.EditorFor(model => model.inTime)</td>
+                <td>@Html.ValidationMessageFor(model => model.inTime)</td>
+            </tr>
+            <tr>
+                <td>操作员：</td>
+                <td>@Html.EditorFor(model => model.oper)</td>
+                <td>@Html.ValidationMessageFor(model => model.oper)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Submit1" type="submit" value="修改" />
+                    &nbsp;
+                    <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>

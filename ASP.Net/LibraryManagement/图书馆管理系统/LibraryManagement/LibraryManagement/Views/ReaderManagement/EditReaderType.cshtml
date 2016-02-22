@@ -1,0 +1,40 @@
+﻿@model LibraryManagement.Models.ReaderType
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "EditReaderType";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+</head>
+<center><h2>修改读者类型</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>读者类型：</td>
+                <td>@Html.EditorFor(model => model.readertype)</td>
+                <td>@Html.ValidationMessageFor(model=>model.readertype)</td>
+            </tr>
+            <tr>
+                <td>可借数量：</td>
+                <td>@Html.EditorFor(model => model.number)</td>
+                <td>@Html.ValidationMessageFor(model=>model.number)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Submit1" type="submit" value="修改" />
+                    &nbsp;
+                    <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>

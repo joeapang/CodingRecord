@@ -1,0 +1,21 @@
+﻿@model LibraryManagement.Models.BookCase
+@{
+    ViewBag.Title = "DeleteBookCase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<center><h2>删除书架</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <p>
+            <h3>你确定删除<strong>@Model.bookcasename</strong>这个书架？</h3>
+            <input type="submit" value="删除" /> |
+            @Html.ActionLink("返回", "BookCaseManagement")
+        </p>
+    }
+</div>

@@ -1,0 +1,124 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+#menu {
+    font-size: 12px;
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    background-color:#fafafa;
+    width: 720px;
+    height: auto;
+}
+
+    #menu ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0px;
+        display: inline-block;
+    }
+
+    #menu li {
+        float: left;
+        position: relative;
+        width:90px;
+    }
+
+    #menu ul ul {
+        visibility: hidden;
+        position: absolute;
+        left: 3px;
+        top: 35px;
+    }
+
+    #menu table {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #menu ul li:hover ul,
+    #menu ul a:hover ul {
+        visibility: visible;
+    }
+
+    #menu a {
+        display: block;
+        border: 1px solid #00ffff;
+        background: #8f9a94;
+        padding: 6px 10px;
+        margin: 5px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+        #menu a:hover {
+            background: #fafafa;
+            color: #000;
+            border: 1px solid #000;
+        }
+
+    #menu ul ul {
+    }
+
+        #menu ul ul li {
+            clear: both;
+            text-align: left;
+            font-size: 12px;
+        }
+
+            #menu ul ul li a {
+                display: block;
+                width: 100px;
+                height: 15px;
+                margin: 0;
+                border: 0;
+                border-bottom: 1px solid #808080;
+            }
+
+                #menu ul ul li a:hover {
+                    border: 0;
+                    background: #67cbe4;
+                    border-bottom: 1px solid #fff;
+                }
+
+#links {
+    background: #fafafa;
+    width: 720px;
+    height: 25px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+}
+
+#body {
+    width: 720px;
+    height: auto;
+    background-color: #fafafa;
+    margin: 0 auto;
+    border-left: 1px solid #00ffff;
+    border-right: 1px solid #00ffff;
+    border-bottom: 1px solid #00ffff;
+}
+
+#dh {
+    width: 720px;
+    height: auto;
+    background-color:#fafafa;
+    margin: 0 auto;
+}
+
+#dh1 {
+    width: 720px;
+    height: 120px;
+    background-image: url("../Image/daohang.jpg");
+    margin: 0 auto;
+    background-size: 720px 120px;
+}
+.bod {
+    background-color:#939e9a;
+    position:relative;
+}
+    

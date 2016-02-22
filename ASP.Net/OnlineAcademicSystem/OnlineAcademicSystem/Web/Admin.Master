@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Web.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function displaySubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "block";
+        }
+        function hideSubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "none";
+        }
+    </script>
+</head>
+<body style="background-color:gray">
+    <form id="form1" runat="server">
+        <div align="center" style="background-color:white;width:810px;height:665px;margin:0 auto">
+            <div id="backimage"></div>
+            
+            <div id="menu" style="background-color: #ffc90d;float:left;width:560px;">
+                <ul>
+                    <li>
+                        <a href="Index.aspx">首页</a>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>系统设置</a>
+                        <ul>
+                            <li><a href="Addannouncement.aspx">发布公告</a></li>
+                            <li><a href="majormanagement.aspx">学院管理</a></li>
+                            <li><a href="grademanagement.aspx">年级管理</a></li>
+                            <li><a href="classesmanagement.aspx">班级管理</a></li>
+                            <li><a href="deleteclasses.aspx">删除班级</a></li>
+                            <li><a href="classroommanagement.aspx">教室信息</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>课程管理</a>
+                        <ul>
+                            <li><a href="coursemanagement.aspx">课程管理</a></li>
+                            <li><a href="deletecourse.aspx">删除课程</a></li>
+                            <li><a href="course_typemanagement.aspx">课程类型管理</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>信息管理</a>
+                        <ul>
+                            <li><a href="teachermanagement.aspx">添加修改教师</a></li>
+                            <li><a href="delete_teacher.aspx">删除教师</a></li>
+                            <li><a href="studentmanagement.aspx">学生信息</a></li>
+                            <li><a href="delete_student.aspx">删除学生</a></li>
+                            <li><a href="teacher_positionmanagement.aspx">教师职称</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>成绩管理</a>
+                        <ul>
+                            <li><a href="check_student_score.aspx">查看学生成绩</a></li>
+                        </ul>
+                    </li>
+
+                    <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                        <a>个人信息</a>
+                        <ul>
+                            <li><a href="Modifypassword.aspx">修改密码</a></li>
+                            <li><a href="../Login.aspx">注销</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+           <div style="background-color: #ffc90d;height:34px;line-height:34px;">
+                <asp:Label ID="Label1" runat="server" Text="欢迎你："></asp:Label>
+                <asp:Label ID="name" runat="server" Text=""></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="管理员"></asp:Label>
+            </div>
+            <br />
+            <br />
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

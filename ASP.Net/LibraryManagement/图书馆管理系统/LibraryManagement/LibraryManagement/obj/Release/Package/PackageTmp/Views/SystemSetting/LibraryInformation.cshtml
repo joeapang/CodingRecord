@@ -1,0 +1,77 @@
+﻿@model LibraryManagement.Models.LibraryInformation
+@{
+    ViewBag.Title = "LibraryInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <script src="~/Script/jquery-1.8.2.min.js"></script>
+    <script src="~/Script/jquery.validate.min.js"></script>
+    <script src="~/Script/jquery.validate.unobtrusive.min.js"></script>
+    <center><h2>图书馆信息</h2></center>
+    <div align="center">
+        <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+    </div>
+    <div align="center">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(model => model.libraryname):</td>
+                    <td>@Html.EditorFor(model => model.libraryname)</td>
+                    <td>@Html.ValidationMessageFor(model => model.libraryname)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.curator)</td>
+                    <td>@Html.EditorFor(model => model.curator)</td>
+                    <td>@Html.ValidationMessageFor(model => model.curator)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.tel):</td>
+                    <td>@Html.EditorFor(model => model.tel)</td>
+                    <td>@Html.ValidationMessageFor(model => model.tel)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.address):</td>
+                    <td>@Html.EditorFor(model => model.address)</td>
+                    <td>@Html.ValidationMessageFor(model => model.address)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.email):</td>
+                    <td>@Html.EditorFor(model => model.email)</td>
+                    <td>@Html.ValidationMessageFor(model => model.email)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.url):</td>
+                    <td>@Html.EditorFor(model => model.url)</td>
+                    <td>@Html.ValidationMessageFor(model => model.url)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.createDate):</td>
+                    <td>@Html.EditorFor(model => model.createDate)</td>
+                    <td>@Html.ValidationMessageFor(model => model.createDate)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(model => model.introduce):</td>
+                    <td>@Html.TextAreaFor(model => model.introduce)</td>
+                    <td>@Html.ValidationMessageFor(model => model.introduce)</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="保存" />
+                        <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+                    </td>
+                </tr>
+            </table>      
+}
+    </div>
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head >
+    <link href="@Url.Content("~/Content/css.css")" rel=" stylesheet"  />
+
+    <script src="/Scripts/main.js"></script>
+    <script src="/Scripts/jquery.js"></script>
+    <script type="text/javascript">
+        //显示系统时间
+        window.onload = function () {
+            var show = document.getElementById("show");
+            setInterval(function () {
+                var time = new Date();
+                // 程序计时的月从0开始取值后+1
+                var m = time.getMonth() + 1;
+                var t = time.getFullYear() + "-" + m + "-"
+                  + time.getDate() + " " + time.getHours() + ":"
+                  + time.getMinutes() + ":" + time.getSeconds();
+                show.innerHTML = t;
+            }, 1000);
+        };
+        //导航栏
+        function displaySubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "block";
+        }
+        function hideSubMenu(li) {
+            var subMenu = li.getElementsByTagName("ul")[0];
+            subMenu.style.display = "none";
+        }
+    </script>
+
+
+    <title>@ViewBag.Title</title>
+</head>
+<body class="bod">
+    <div id="dh1"></div>
+    <div id="dh">
+        &nbsp;
+                <label>欢迎你:</label><a style="color:#482b2b">@Session["name"]</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               <label id="show"></label>
+         
+    </div>
+    <div id="menu" align="center">
+        <ul>
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a href="~/Home/Index">首页</a>
+                <ul>
+                    <li><a href="~/Home/LibraryDetails">图书馆简介</a></li>
+                </ul>
+            </li>
+
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a>系统设置</a>
+                <ul>
+                    <li><a href="~/SystemSetting/LibraryInformation">图书馆信息</a></li>
+                    <li><a href="~/SystemSetting/AdminSetting">管理员设置</a></li>
+                    <li><a href="~/SystemSetting/BookCaseManagement">书架管理</a></li>
+                </ul>
+            </li>
+
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a>读者管理</a>
+                <ul>
+                    <li><a href="~/ReaderManagement/ReaderTypeManagement">读者类型管理</a></li>
+                    <li><a href="~/ReaderManagement/ReaderInformationManagement">读者档案管理</a></li>
+                </ul>
+            </li>
+
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a>图书管理</a>
+                <ul>
+                    <li><a href="~/BookManagement/BookTypeManagement">图书类型管理</a></li>
+                    <li><a href="~/BookManagement/BookInformationManagement">图书信息档案管理</a></li>
+                </ul>
+            </li>
+
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a>图书借还</a>
+                <ul>
+                    <li><a href="~/BorrowBook/Borrow">借阅图书</a></li>
+                    <li><a href="~/BorrowBook/Back">归还图书</a></li>
+                </ul>
+            </li>
+
+            <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)">
+                <a>系统查询</a>
+                <ul>
+                    <li><a href="~/SystemQuery/BookInformationQuery">图书信息查询</a></li>
+                    <li><a href="~/SystemQuery/BookBorrowQuery">图书借阅查询</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="~/Login/ModifyPassword">修改密码</a>
+            </li>
+            <li>
+                <a href="~/Login/Login">注销</a>
+            </li>
+        </ul>
+    </div>
+    <div id="body">
+        @RenderBody()
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <center><h5>外网链接：
+                <a href="http://www.lib.dlut.edu.cn/">大连理工大学图书馆</a>
+                <a href="http://lib.dlmu.edu.cn/ ">大连海事大学图书馆</a>
+                <a href="http://www.lib.neu.edu.cn/ ">东北大学图书馆</a>
+            </h5></center>
+
+        <center><h5>Copyright © 2016 Library System Incorporated. All rights reserved. </h5></center>
+        <center><h5>
+            <a href="http://corp.sina.com.cn/chn/sina_priv.html" target="_blank">隐私保护</a>　
+            <a href="http://www.neusoft.com/cn/">东软集团</a>　
+            <a href="http://www.sina.com.cn/intro/copyright.shtml">版权所有</a>　
+            <a href="http://www.miibeian.gov.cn" target="_blank">京ICP证000007</a>
+            </h5></center>
+        <center><h5>客户服务热线：4006900000　违法和不良信息举报电话：010-62646869　举报邮箱：jubao@vip.sina.com</h5></center>
+
+
+    </div>
+
+    
+</body>
+    </html>

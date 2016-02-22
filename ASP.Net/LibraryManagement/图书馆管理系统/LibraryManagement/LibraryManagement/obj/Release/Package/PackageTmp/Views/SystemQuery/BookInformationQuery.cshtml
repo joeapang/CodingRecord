@@ -1,0 +1,59 @@
+﻿@model LibraryManagement.Models.BookQuery
+@{
+    ViewBag.Title = "BookInformationQuery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<center><h2>图书档案查询</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+@using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <p>
+        请选择查询条件：
+        @Html.DropDownList("queryconditions", new List<SelectListItem> {
+                new SelectListItem(){Text="全部图书", Value="全部图书"},
+                new SelectListItem(){Text="条形码", Value="条形码"},
+		        new SelectListItem(){Text="图书类型", Value="图书类型"},
+                new SelectListItem(){Text="书架", Value="书架"},
+                new SelectListItem(){Text="出版社", Value="出版社"}}, new { @style = "width:100px;height:24px;" })
+        @Html.TextBoxFor(model => model.importqueryconditions, new { @style = "width:200px;height:20px;" })
+        &nbsp;
+        <input id="Submit1" type="submit" value="查询" style="width:50px;height:30px;"/>
+    </p>
+    <br />
+    <br />
+    <br />
+    <center><a href="~/BorrowBook/Borrow">借阅图书</a></center>
+    <table class="tb3" >
+        <tr>
+            <td>条形码</td>
+            <td>图书名称</td>
+            <td>图书作作者</td>
+            <td>图书类型</td>
+            <td>出版社</td>
+            <td>书架</td>
+            <td>库存总量</td>
+        </tr>
+        @foreach(var book in Model.Books)
+        {
+            <tr>
+                <td>@book.bookcode</td>
+                <td>@book.bookname</td>
+                <td>@book.author</td>
+                <td>@book.BookTypes.typename</td>
+                <td>@book.pubname</td>
+                <td>@book.BookCases.bookcasename</td>
+                <td>@book.storage</td>
+            </tr>
+        }
+    </table>
+}
+</div>

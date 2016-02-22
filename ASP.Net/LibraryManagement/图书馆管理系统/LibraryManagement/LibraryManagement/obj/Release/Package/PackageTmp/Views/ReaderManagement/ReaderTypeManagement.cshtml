@@ -1,0 +1,38 @@
+﻿@model IEnumerable<LibraryManagement.Models.ReaderType>
+@{
+    ViewBag.Title = "ReaderTypeManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+<center><h2>读者类型信息</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <center><a href="~/ReaderManagement/AddReaderType">添加读者类型</a></center>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>读者类型</td>
+                <td>可借数量</td>
+                <td>修改</td>
+                <td>删除</td>
+            </tr>
+            @foreach (var readertype in Model)
+            {
+                <tr>
+                    <td>@readertype.readertype</td>
+                    <td>@readertype.number</td>
+                    <td><a href="~/ReaderManagement/EditReaderType?id=@readertype.readertypeid" style="color:#b200ff">修改</a></td>
+                    <td><a href="~/ReaderManagement/DeleteReaderType?id=@readertype.readertypeid" style="color:#b200ff">删除</a></td>
+                </tr>
+            }
+        </table>
+    }
+</div>

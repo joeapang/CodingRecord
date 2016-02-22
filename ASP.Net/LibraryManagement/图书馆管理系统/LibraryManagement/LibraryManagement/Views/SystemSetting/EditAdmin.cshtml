@@ -1,0 +1,44 @@
+﻿@model LibraryManagement.Models.Admin
+@{
+    ViewBag.Title = "EditAdmin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<center><h2>管理员权限设置</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+
+        <table>
+            <tr>
+                <td>管理员名称</td>
+                <td>系统设置</td>
+                <td>读者管理</td>
+                <td>图书管理</td>
+                <td>图书借还</td>
+                <td>系统查询</td>
+                <td>权限设置</td>
+            </tr>
+            <tr>
+                <td>@Model.adminname</td>
+                <td>@Html.CheckBoxFor(model=>model.sysset)</td>
+                <td>@Html.CheckBoxFor(model => model.readset)</td>
+                <td>@Html.CheckBoxFor(model => model.bookset)</td>
+                <td>@Html.CheckBoxFor(model => model.borrowback)</td>
+                <td>@Html.CheckBoxFor(model => model.sysquery)</td>
+                <td>
+                    <input id="Submit1" type="submit" value="保存" />
+                    <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+                </td>
+            </tr>
+        </table>
+    }
+</div>

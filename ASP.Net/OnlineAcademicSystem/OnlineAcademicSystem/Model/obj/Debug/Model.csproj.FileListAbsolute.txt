@@ -1,0 +1,9 @@
+F:\大连实训\asp\OnlineAcademicSystem\Model\bin\Debug\Model.dll
+F:\大连实训\asp\OnlineAcademicSystem\Model\bin\Debug\Model.pdb
+F:\大连实训\asp\OnlineAcademicSystem\Model\obj\Debug\Model.dll
+F:\大连实训\asp\OnlineAcademicSystem\Model\obj\Debug\Model.pdb
+G:\OnlineAcademicSystem\OnlineAcademicSystem\Model\bin\Debug\Model.dll
+G:\OnlineAcademicSystem\OnlineAcademicSystem\Model\bin\Debug\Model.pdb
+G:\OnlineAcademicSystem\OnlineAcademicSystem\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+G:\OnlineAcademicSystem\OnlineAcademicSystem\Model\obj\Debug\Model.dll
+G:\OnlineAcademicSystem\OnlineAcademicSystem\Model\obj\Debug\Model.pdb

@@ -1,0 +1,36 @@
+﻿@model LibraryManagement.Models.BookCase
+@{
+    ViewBag.Title = "AddBookCase";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+</head>
+
+<center><h2>添加书架信息</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+        <table>
+            <tr>
+                <td>@Html.LabelFor(model => model.bookcasename):</td>
+                <td>@Html.EditorFor(model => model.bookcasename)</td>
+                <td>@Html.ValidationMessageFor(model => model.bookcasename)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input id="Submit1" type="submit" value="添加" />
+                    &nbsp;&nbsp;
+                    <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+                </td>
+            </tr>
+        </table>
+}
+</div>

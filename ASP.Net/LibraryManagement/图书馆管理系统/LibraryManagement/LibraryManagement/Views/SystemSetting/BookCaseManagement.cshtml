@@ -1,0 +1,41 @@
+﻿@model IEnumerable<LibraryManagement.Models.BookCase>
+@{
+    ViewBag.Title = "BookCaseManagement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+
+<center><h2>书架管理</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div>
+    <center><a href="~/SystemSetting/AddBookCase">添加书架信息</a></center>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <center>
+        <table>
+            <tr>
+                <td>书架编号</td>
+                <td>书架名称</td>
+                <td>修改</td>
+                <td>删除</td>
+            </tr>
+            @foreach (var bookcase in Model)
+            {
+                <tr>
+                    <td>@bookcase.bookcaseid</td>
+                    <td>@bookcase.bookcasename</td>
+                    <td><a href="~/SystemSetting/EditBookCase?id=@bookcase.bookcaseid" style="color:#b200ff">修改</a></td>
+                    <td><a href="~/SystemSetting/DeleteBookCase?id=@bookcase.bookcaseid" style="color:#b200ff">删除</a></td>
+                </tr>
+            }
+        </table>
+    </center>
+}
+</div>

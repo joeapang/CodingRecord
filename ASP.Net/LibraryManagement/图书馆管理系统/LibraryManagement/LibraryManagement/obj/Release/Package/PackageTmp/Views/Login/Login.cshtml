@@ -1,0 +1,80 @@
+﻿@model LibraryManagement.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+<html>
+<head>
+    <title>用户登陆</title>
+    <link href="@Url.Content("~/Content/div.css")" rel=" stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <script language="javascript" type="text/javascript">
+
+            var code; //在全局 定义验证码
+    function createCode() {
+        code = "";
+        var codeLength = 4;//验证码的长度
+        var checkCode = document.getElementById("checkCode");
+        var selectChar = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'wW', 'x', 'y', 'z');//所有候选组成验证码的字符
+
+        for (var i = 0; i < codeLength; i++) {
+
+
+            var charIndex = Math.floor(Math.random() * 36);
+            code += selectChar[charIndex];
+        }
+        //       alert(code);
+        if (checkCode) {
+            checkCode.className = "code";
+            checkCode.value = code;
+        }
+    }
+
+    function validate() {
+        var inputCode = document.getElementById("input1").value;
+        if (inputCode.length <= 0) {
+            alert("请输入验证码");
+        }
+        else if (inputCode != code) {
+            alert("验证码错误");
+            createCode();//刷新验证码
+        }
+    }
+</script>
+
+</head>
+<body onload="createCode()"class="bod">
+
+        <div class="login">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div class="dg">
+                    <label>
+                        <span>用户名：</span>
+                        @Html.TextBoxFor(model => model.username, new { @Class = "unchanged1" })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.username)
+                    <br />
+                    <label>
+                        <span>密码：</span>
+                        @Html.PasswordFor(model => model.password, new { @Class = "unchanged1" })
+                    </label>
+                    @Html.ValidationMessageFor(model => model.password)
+                    <br />
+                    <label>
+                        <span>验证码：</span>
+                    </label>
+                    <form action="#">
+                        @Html.TextBoxFor(model => model.sryzm, new { @id = "input1", Class = "unchanged1" })
+                        @Html.TextBoxFor(model => model.yzm, new { @onclick = "createCode()", readOnly = "readOnly", id = "checkCode", Class = "unchanged", style = "width:50px; height:30px;opacity:0.5;font-size:18px;font-weight:bold;" })<br />
+                    </form>
+                    <br />
+                    <input id="Submit1" type="submit" value="登录" onclick="validate()" class="btn" />
+                </div>
+            }
+        </div>
+
+</body>
+</html>

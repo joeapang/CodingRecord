@@ -1,0 +1,101 @@
+﻿@model LibraryManagement.Models.Reader
+@{
+    ViewBag.Title = "AddReaderInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/table.css")" rel=" stylesheet" />
+</head>
+<center><h2>添加读者个人信息</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+@using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td>读者编号：</td>
+            <td>@Html.EditorFor(model=>model.readerid)</td>
+            <td>@Html.ValidationMessageFor(model=>model.readerid)</td>
+        </tr>
+        <tr>
+            <td>姓名：</td>
+            <td>@Html.EditorFor(mdoel=>Model.readername)</td>
+            <td>@Html.ValidationMessageFor(model=>model.readername)</td>
+        </tr>
+        <tr>
+            <td>性别：</td>
+            <td>
+               @Html.DropDownList("sex", new List<SelectListItem> { 
+                new SelectListItem(){Text="男",Value="true"},
+                new SelectListItem(){Text="女",Value="false"}})
+            </td>
+        </tr>
+        <tr>
+            <td>读者类型：</td>
+            <td>
+                @Html.DropDownList("readertypeid",new SelectList(ViewBag.ReaderTypes as System.Collections.IEnumerable,
+                "readertypeid", "readertype", Model.readertypeid))
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期：</td>
+            <td>@Html.EditorFor(model=>model.birthday)</td>
+            <td>(格式为2007-01-01)</td>
+            <td>@Html.ValidationMessageFor(model => model.birthday)</td>
+        </tr>
+        <tr>
+            <td>证件类型：</td>
+            <td>
+               @Html.DropDownList("paperType", new List<SelectListItem> {
+                new SelectListItem(){Text="学生证",Value="学生证"},
+                new SelectListItem(){Text="身份证",Value="身份证"},
+                new SelectListItem(){Text="工作证",Value="工作证"},
+                new SelectListItem(){Text="军官证",Value="军官证"}})
+            </td>
+        </tr>
+        <tr>
+            <td>证件号码：</td>
+            <td>@Html.EditorFor(model=>model.paperNum)</td>
+            <td>@Html.ValidationMessageFor(model => model.paperNum)</td>
+        </tr>
+        <tr>
+            <td>电话：</td>
+            <td>@Html.EditorFor(model=>model.tel)</td>
+            <td>@Html.ValidationMessageFor(model => model.tel)</td>
+        </tr>
+        <tr>
+            <td>Email：</td>
+            <td>@Html.EditorFor(model=>model.email)</td>
+            <td>@Html.ValidationMessageFor(model => model.email)</td>
+        </tr>
+        <tr>
+            <td>注册日期：</td>
+            <td>@Html.EditorFor(model=>model.createDate)</td>
+            <td>@Html.ValidationMessageFor(model => model.createDate)</td>
+        </tr>
+        <tr>
+            <td>操作员：</td>
+            <td>@Html.EditorFor(model=>model.oper)</td>
+            <td>@Html.ValidationMessageFor(model => model.oper)</td>
+        </tr>
+        <tr>
+            <td>备注：</td>
+            <td>@Html.TextAreaFor(model=>model.remark)</td>
+            <td>@Html.ValidationMessageFor(model => model.remark)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input id="Submit1" type="submit" value="添加" />
+                &nbsp;
+                <input type="button" value="取消" onclick="window.location = 'javascript:history.back()'" />
+            </td>
+        </tr>
+    </table>
+}
+</div>

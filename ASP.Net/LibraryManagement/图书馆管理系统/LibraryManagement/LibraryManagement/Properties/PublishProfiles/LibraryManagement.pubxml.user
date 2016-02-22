@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Sydeny\Desktop\WebSite</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>12/10/2015 14:48:06</publishTime>
+    </File>
+    <File Include="bin/LibraryManagement.dll">
+      <publishTime>01/11/2016 02:10:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>12/10/2015 14:48:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/EntityFramework.resources.dll">
+      <publishTime>12/10/2015 14:48:08</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Optimization.resources.dll">
+      <publishTime>12/10/2015 14:48:08</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="Content/borrow2_table.css">
+      <publishTime>01/08/2016 13:28:24</publishTime>
+    </File>
+    <File Include="Content/borrowtable.css">
+      <publishTime>01/07/2016 20:21:25</publishTime>
+    </File>
+    <File Include="Content/css.css">
+      <publishTime>01/10/2016 02:10:39</publishTime>
+    </File>
+    <File Include="Content/div.css">
+      <publishTime>01/10/2016 02:10:36</publishTime>
+    </File>
+    <File Include="Content/table.css">
+      <publishTime>01/05/2016 14:55:24</publishTime>
+    </File>
+    <File Include="Content/text_table.css">
+      <publishTime>01/09/2016 18:57:14</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>12/23/2015 18:53:40</publishTime>
+    </File>
+    <File Include="Image/body.gif">
+      <publishTime>01/09/2016 23:57:46</publishTime>
+    </File>
+    <File Include="Image/daohang.jpg">
+      <publishTime>01/09/2016 20:38:32</publishTime>
+    </File>
+    <File Include="Image/denglu.jpg">
+      <publishTime>01/09/2016 23:54:54</publishTime>
+    </File>
+    <File Include="Image/fenge_line.jpg">
+      <publishTime>12/28/2015 16:16:08</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/23/2015 18:53:42</publishTime>
+    </File>
+    <File Include="Script/jquery-1.8.2.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery-1.8.2.min.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery-ui-1.8.24.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery-ui-1.8.24.min.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.js">
+      <publishTime>12/25/2015 14:21:16</publishTime>
+    </File>
+    <File Include="Script/jquery.unobtrusive-ajax.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.unobtrusive-ajax.min.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.validate.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.validate.min.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.validate.unobtrusive.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/jquery.validate.unobtrusive.min.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/knockout-2.2.0.debug.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/knockout-2.2.0.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Script/main.js">
+      <publishTime>12/25/2015 14:21:16</publishTime>
+    </File>
+    <File Include="Script/modernizr-2.6.2.js">
+      <publishTime>12/28/2015 19:08:30</publishTime>
+    </File>
+    <File Include="Views/BookManagement/AddBookInformation.cshtml">
+      <publishTime>01/05/2016 00:47:49</publishTime>
+    </File>
+    <File Include="Views/BookManagement/AddBookType.cshtml">
+      <publishTime>01/05/2016 00:47:53</publishTime>
+    </File>
+    <File Include="Views/BookManagement/BookInformationDetails.cshtml">
+      <publishTime>01/05/2016 00:47:55</publishTime>
+    </File>
+    <File Include="Views/BookManagement/BookInformationManagement.cshtml">
+      <publishTime>01/07/2016 01:17:28</publishTime>
+    </File>
+    <File Include="Views/BookManagement/BookTypeManagement.cshtml">
+      <publishTime>01/07/2016 01:34:31</publishTime>
+    </File>
+    <File Include="Views/BookManagement/DeleteBook.cshtml">
+      <publishTime>01/05/2016 00:47:59</publishTime>
+    </File>
+    <File Include="Views/BookManagement/DeleteBookType.cshtml">
+      <publishTime>01/05/2016 00:48:00</publishTime>
+    </File>
+    <File Include="Views/BookManagement/EditBookType.cshtml">
+      <publishTime>01/05/2016 00:48:01</publishTime>
+    </File>
+    <File Include="Views/BorrowBook/Back.cshtml">
+      <publishTime>01/09/2016 18:27:44</publishTime>
+    </File>
+    <File Include="Views/BorrowBook/backs.cshtml">
+      <publishTime>01/08/2016 19:30:52</publishTime>
+    </File>
+    <File Include="Views/BorrowBook/Borrow.cshtml">
+      <publishTime>01/08/2016 15:17:12</publishTime>
+    </File>
+    <File Include="Views/BorrowBook/borrows.cshtml">
+      <publishTime>01/08/2016 15:53:11</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>01/09/2016 19:46:31</publishTime>
+    </File>
+    <File Include="Views/Home/LibraryDetails.cshtml">
+      <publishTime>01/10/2016 21:17:01</publishTime>
+    </File>
+    <File Include="Views/Login/Index.cshtml">
+      <publishTime>01/09/2016 19:18:42</publishTime>
+    </File>
+    <File Include="Views/Login/Login.cshtml">
+      <publishTime>01/09/2016 23:08:33</publishTime>
+    </File>
+    <File Include="Views/Login/ModifyPassword.cshtml">
+      <publishTime>01/06/2016 14:13:11</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/AddReaderInformation.cshtml">
+      <publishTime>01/06/2016 13:28:10</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/AddReaderType.cshtml">
+      <publishTime>01/06/2016 15:05:16</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/DeleteReader.cshtml">
+      <publishTime>01/05/2016 00:48:05</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/DeleteReaderType.cshtml">
+      <publishTime>01/05/2016 00:47:52</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/EditReaderType.cshtml">
+      <publishTime>01/05/2016 00:48:06</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/ReaderInformationDetails.cshtml">
+      <publishTime>01/05/2016 00:48:07</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/ReaderInformationManagement.cshtml">
+      <publishTime>01/07/2016 01:16:47</publishTime>
+    </File>
+    <File Include="Views/ReaderManagement/ReaderTypeManagement.cshtml">
+      <publishTime>01/07/2016 01:14:40</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>01/09/2016 22:24:54</publishTime>
+    </File>
+    <File Include="Views/SystemQuery/BookBorrowQuery.cshtml">
+      <publishTime>01/09/2016 18:08:52</publishTime>
+    </File>
+    <File Include="Views/SystemQuery/BookInformationQuery.cshtml">
+      <publishTime>01/09/2016 18:30:51</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/AddAdmin.cshtml">
+      <publishTime>01/06/2016 09:48:41</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/AddBookCase.cshtml">
+      <publishTime>01/05/2016 00:48:13</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/AdminSetting.cshtml">
+      <publishTime>01/07/2016 01:16:11</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/BookCaseManagement.cshtml">
+      <publishTime>01/07/2016 01:15:58</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/DeleteAdmin.cshtml">
+      <publishTime>01/05/2016 00:48:17</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/DeleteBookCase.cshtml">
+      <publishTime>01/05/2016 00:48:18</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/EditAdmin.cshtml">
+      <publishTime>01/06/2016 14:35:06</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/EditBookCase.cshtml">
+      <publishTime>01/05/2016 00:48:21</publishTime>
+    </File>
+    <File Include="Views/SystemSetting/LibraryInformation.cshtml">
+      <publishTime>01/07/2016 22:57:34</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/23/2015 18:53:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/11/2016 02:10:56</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

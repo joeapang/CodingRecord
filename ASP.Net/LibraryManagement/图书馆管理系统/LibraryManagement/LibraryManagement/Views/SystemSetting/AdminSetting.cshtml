@@ -1,0 +1,48 @@
+﻿@model IEnumerable<LibraryManagement.Models.Admin>
+@{
+    ViewBag.Title = "AdminSetting";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+</head>
+<center><h2>管理员设置</h2></center>
+<div align="center">
+    <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+</div>
+<div align="center">
+    <center><a href="~/SystemSetting/AddAdmin">添加管理员</a></center>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <table>
+        <tr>
+            <td>管理员名称</td>
+            <td>系统设置</td>
+            <td>读者管理</td>
+            <td>图书管理</td>
+            <td>图书借还</td>
+            <td>系统查询</td>
+            <td>权限设置</td>
+            <td>删除</td>
+        </tr>
+        @foreach (var admin in Model)
+        {
+            <tr>
+                <td>@admin.adminname</td>
+                <td><center>@Html.CheckBoxFor(model => admin.sysset, new {@onclick="return false"})</center></td>
+                <td><center>@Html.CheckBoxFor(model => admin.readset, new { @onclick = "return false" })</center></td>                
+                <td><center>@Html.CheckBoxFor(model => admin.bookset, new { @onclick = "return false" })</center></td>
+                <td><center>@Html.CheckBoxFor(model => admin.borrowback, new { @onclick = "return false" })</center></td>                
+                <td><center>@Html.CheckBoxFor(model => admin.sysquery, new { @onclick = "return false" })</center></td>
+                <td><a href="~/SystemSetting/EditAdmin?id=@admin.id" style="color:#b200ff">权限设置</a></td>
+                <td><a href="~/SystemSetting/DeleteAdmin?id=@admin.id" style="color:#b200ff">删除</a></td>
+            </tr>
+        }
+        
+    </table>
+}
+</div>

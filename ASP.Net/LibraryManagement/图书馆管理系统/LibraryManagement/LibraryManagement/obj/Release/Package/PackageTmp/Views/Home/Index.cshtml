@@ -1,0 +1,79 @@
+﻿@model LibraryManagement.Models.ranking_list
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="@Url.Content("~/Content/text_table.css")" rel=" stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<br />
+<center><h2>排行榜</h2></center>
+<br />
+<br />
+<div>
+    <center><h4 style="color:red">图书借阅排行榜</h4></center>
+    <div align="center">
+        <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+    </div>
+    <table class="tb4">
+        <tr>
+            <td>图书编号</td>
+            <td>图书名称</td>
+            <td>图书类型</td>
+            <td>作者</td>
+            <td>书架</td>
+            <td>出版社</td>
+            <td>被借次数</td>
+        </tr>
+        @foreach(var book in Model.Books)
+        { 
+            <tr>
+                <td>@book.bookcode</td>
+                <td>@book.bookname</td>
+                <td>@book.BookTypes.typename</td>
+                <td>@book.author</td>
+                <td>@book.BookCases.bookcasename</td>
+                <td>@book.pubname</td>
+                <td>@book.borrownum</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <center><h4 style="color:red">读者借阅排行榜</h4></center>
+    <div align="center">
+        <img src="~/Image/fenge_line.jpg" width="720" height="10" />
+    </div>
+    <table class="tb4">
+        <tr>
+            <td>读者编号</td>
+            <td>读者名称</td>
+            <td>读者类型</td>
+            <td>性别</td>
+            <td>证件类型</td>
+            <td>证件号码</td>
+            <td>借书次数</td>
+        </tr>
+        @foreach (var reader in Model.Readers)
+        {
+            <tr>
+                <td>@reader.readerid</td>
+                <td>@reader.readername</td>
+                <td>@reader.ReaderTypes.readertype</td>
+                <td>
+                    @if(reader.sex)
+                    {
+                        @:男
+                    }
+                    else
+                    {
+                        @:女
+                    }
+                </td> 
+                <td>@reader.paperType</td>
+                <td>@reader.paperNum</td>
+                <td>@reader.borrownum</td>
+            </tr>
+        }
+    </table>
+</div>

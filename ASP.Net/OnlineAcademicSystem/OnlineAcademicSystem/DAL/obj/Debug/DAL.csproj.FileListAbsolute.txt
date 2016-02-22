@@ -1,0 +1,14 @@
+F:\大连实训\asp\OnlineAcademicSystem\DAL\bin\Debug\DAL.dll
+F:\大连实训\asp\OnlineAcademicSystem\DAL\bin\Debug\DAL.pdb
+F:\大连实训\asp\OnlineAcademicSystem\DAL\bin\Debug\Model.dll
+F:\大连实训\asp\OnlineAcademicSystem\DAL\bin\Debug\Model.pdb
+F:\大连实训\asp\OnlineAcademicSystem\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\大连实训\asp\OnlineAcademicSystem\DAL\obj\Debug\DAL.dll
+F:\大连实训\asp\OnlineAcademicSystem\DAL\obj\Debug\DAL.pdb
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\bin\Debug\DAL.dll
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\bin\Debug\DAL.pdb
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\bin\Debug\Model.dll
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\bin\Debug\Model.pdb
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\obj\Debug\DAL.dll
+G:\OnlineAcademicSystem\OnlineAcademicSystem\DAL\obj\Debug\DAL.pdb
